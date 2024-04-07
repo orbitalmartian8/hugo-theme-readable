@@ -5,7 +5,7 @@
 navbar without animations. We default to "classy" to keep the animations and be
 backwards compatible to earlier versions of this theme without requiring a
 config change. -->
-$navbar_style := (default "roundesque" $.Site.Params.navbar_style)
+{{ $navbar_style := (default "roundesque" $.Site.Params.navbar_style) }}
 <nav data-style={{ $navbar_style }}>
   {{ range .Site.Menus.main -}}
   {{ if eq $navbar_style "roundesque" }}<span>{{ end }}
